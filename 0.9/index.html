@@ -33,7 +33,7 @@
             <img src="logo.webp" alt="Mangra">
             <h1>Mangra Extensions</h1>
             <p>Connect to your self-hosted manga server</p>
-            <a class="add-btn" href="javascript:void(0)" onclick="addToMangra()">Add to Mangra</a>
+            <a class="add-btn" id="addBtn" href="#">Add to Mangra</a>
         </div>
 
         <p class="section-title">Available Sources</p>
@@ -47,14 +47,9 @@
     <script>
         var REPO_URL = window.location.href.replace(/\/index\.html$/, '').replace(/\/$/, '');
 
-        function addToMangra() {
-            var url = 'mangra://addRepo?url=' + encodeURIComponent(REPO_URL);
-            window.location.href = url;
-            setTimeout(function() {
-                // If app didn't open, show instructions
-                alert('Open Mangra app, go to Extensions settings, tap Edit > +, and paste this URL:\n\n' + REPO_URL);
-            }, 2000);
-        }
+        // Set the deep link href on the button (same approach as Paperback)
+        var btn = document.getElementById('addBtn');
+        btn.href = 'mangra://addRepo?displayName=Mangra%20Extensions&url=' + encodeURIComponent(REPO_URL);
 
         fetch('versioning.json')
             .then(function(r) { return r.json(); })
