@@ -5,8 +5,8 @@
     "types": "1.0.0-alpha.57"
   },
   "repository": {
-    "name": "Mangra Extensions",
-    "description": "Default extensions for Mangra"
+    "name": "Mangra",
+    "description": "Official extensions for Mangra"
   },
   "sources": [
     {
@@ -23,8 +23,9 @@
           "github": "FramboisePi"
         }
       ],
-      "description": "Komga client extension for Mangra",
+      "description": "Connect to your self-hosted Komga server",
       "contentRating": "SAFE",
+      "language": "en",
       "badges": [
         {
           "label": "Self hosted",
@@ -40,38 +41,6 @@
         16
       ],
       "id": "Komga"
-    },
-    {
-      "version": "2.2",
-      "name": "Komga_2",
-      "icon": "icon.png",
-      "developers": [
-        {
-          "name": "Faizan Durrani",
-          "github": "FaizanDurrani"
-        },
-        {
-          "name": "Lemon",
-          "github": "FramboisePi"
-        }
-      ],
-      "description": "Secondary Komga client extension for Mangra",
-      "contentRating": "SAFE",
-      "badges": [
-        {
-          "label": "Self hosted",
-          "backgroundColor": "#000000",
-          "textColor": "#ffffff"
-        }
-      ],
-      "capabilities": [
-        64,
-        1,
-        32,
-        4,
-        16
-      ],
-      "id": "Komga_2"
     }
   ]
 }
